@@ -8,3 +8,5 @@
 .vs/CustomersCoffeeApp/v17/DocumentLayout.json
 
 .vs/CustomersCoffeeApp/DesignTimeBuild/.dtbcache.v2
+
+*.vsidx
