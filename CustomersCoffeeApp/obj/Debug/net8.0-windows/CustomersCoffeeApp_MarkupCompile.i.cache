@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\App.xaml
-5202104664
+6809357385
 
-16-1030177528
+181203303192
 198-635017904
-Controls\HeaderControl.xaml;MainWindow.xaml;Resources\Brushes.xaml;Resources\Converter.xaml;View\CustomerView.xaml;
+Controls\HeaderControl.xaml;MainWindow.xaml;Resources\Brushes.xaml;Resources\Converter.xaml;View\CustomerView.xaml;View\ProductsView.xaml;
 
 True
 

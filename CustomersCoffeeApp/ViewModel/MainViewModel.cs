@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomersCoffeeApp.Command;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,8 @@ namespace CustomersCoffeeApp.ViewModel
 
     public class MainViewModel : ViewModelBase
     {
-        private ViewModelBase _selectedViewModel;
-        private readonly CustomersViewModel _customersViewModel;
+        private ViewModelBase? _selectedViewModel;
+
 
         public ViewModelBase? SelectedViewModel
         {
@@ -22,18 +23,30 @@ namespace CustomersCoffeeApp.ViewModel
             }
         }
 
-        public MainViewModel(CustomersViewModel customersViewModel)
+        public MainViewModel(CustomersViewModel customersViewModel, ProductsViewModel productsViewModel)
         {
-            _customersViewModel = customersViewModel;
-            SelectedViewModel = _customersViewModel;
+            CustomersViewModel = customersViewModel;
+            ProductsViewModel = productsViewModel;
+            SelectedViewModel = CustomersViewModel;
+            SelectViewModelCommand = new DelegateCommand(SelectViewModel);
+        }
+
+        private async void SelectViewModel(object? parameter)
+        {
+            SelectedViewModel = parameter as ViewModelBase;
+            await LoadAsync();
         }
 
         public async override Task LoadAsync()
         {
-            if(SelectedViewModel is not null)
+            if (SelectedViewModel is not null)
             {
                 await SelectedViewModel.LoadAsync();
             }
         }
+        
+        public DelegateCommand SelectViewModelCommand { get; }
+        public CustomersViewModel CustomersViewModel { get; }
+        public ProductsViewModel ProductsViewModel { get; }
     }
 }

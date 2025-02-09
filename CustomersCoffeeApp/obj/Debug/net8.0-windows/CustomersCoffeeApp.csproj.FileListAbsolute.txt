@@ -47,3 +47,5 @@ C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\obj\Deb
 C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\obj\Debug\net8.0-windows\App.baml
 C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\obj\Debug\net8.0-windows\Resources\Brushes.baml
 C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\obj\Debug\net8.0-windows\Resources\Converter.baml
+C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\obj\Debug\net8.0-windows\View\ProductsView.g.cs
+C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\obj\Debug\net8.0-windows\View\ProductsView.baml

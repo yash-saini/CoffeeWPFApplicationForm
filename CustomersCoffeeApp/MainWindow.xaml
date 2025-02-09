@@ -5,12 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomersCoffeeApp" xmlns:controls="clr-namespace:CustomersCoffeeApp.Controls"
         xmlns:view="clr-namespace:CustomersCoffeeApp.View"
+        xmlns:viewModel="clr-namespace:CustomersCoffeeApp.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="653" Width="1220">
     <Window.Resources>
-        <DataTemplate x:Key="CustomersViewModelTemplate">
+        <!--Explicit data template-->
+        <!--<DataTemplate x:Key="CustomersViewModelTemplate">
+            <view:CustomerView/>
+        </DataTemplate>-->
+        <DataTemplate DataType="{x:Type viewModel:CustomersViewModel}">
             <view:CustomerView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:ProductsViewModel}">
+            <view:ProductsView/>
+        </DataTemplate>
+
     </Window.Resources>
     <Grid>
 
@@ -24,15 +33,15 @@
         <!-- Main menu -->
         <Menu FontSize="20">
             <MenuItem Header="_View">
-                <MenuItem Header="_Customers"/>
-                <MenuItem Header="_Products"/>
+                <MenuItem Header="_Customers" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding CustomersViewModel}"/>
+                <MenuItem Header="_Products" Command="{Binding SelectViewModelCommand}" CommandParameter="{Binding ProductsViewModel}"/>
             </MenuItem>
         </Menu>
 
         <!-- Header -->
         <controls:HeaderControl Grid.Row="1"/>
         <!-- Customer View -->
-        <ContentControl Grid.Row="2" Content="{Binding SelectedViewModel}" ContentTemplate="{StaticResource CustomersViewModelTemplate}">
+        <ContentControl Grid.Row="2" Content="{Binding SelectedViewModel}">
         </ContentControl>
         <!-- Statusbar -->
         <StatusBar Grid.Row="3">
