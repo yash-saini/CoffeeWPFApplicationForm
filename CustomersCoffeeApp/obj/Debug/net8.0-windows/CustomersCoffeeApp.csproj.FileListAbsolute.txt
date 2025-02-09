@@ -53,3 +53,4 @@ C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\bin\Deb
 C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\obj\Debug\net8.0-windows\CustomersCoffeeApp.csproj.AssemblyReference.cache
 C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\obj\Debug\net8.0-windows\Customer.5995D144.Up2Date
+C:\Users\ysaini\source\repos\CoffeeWPFApplicationForm\CustomersCoffeeApp\obj\Debug\net8.0-windows\Resources\Styles.baml
