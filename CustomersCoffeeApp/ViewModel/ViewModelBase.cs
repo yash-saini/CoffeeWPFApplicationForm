@@ -11,5 +11,10 @@ namespace CustomersCoffeeApp.ViewModel
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public virtual Task LoadAsync()
+        {
+            return Task.CompletedTask;
+        }
     }
 }

@@ -1,19 +1,4 @@
-﻿using CustomersCoffeeApp.Data;
-using CustomersCoffeeApp.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
 
 namespace CustomersCoffeeApp.View
 {
@@ -22,20 +7,20 @@ namespace CustomersCoffeeApp.View
     /// </summary>
     public partial class CustomerView : UserControl
     {
-        private readonly CustomersViewModel _viewModel;
+        //private readonly CustomersViewModel _viewModel;
 
         public CustomerView()
         {
             InitializeComponent();
-            _viewModel = new CustomersViewModel(new CustomerDataProvider());
-            DataContext = _viewModel;
-            Loaded += CustomerView_Loaded;
+            //_viewModel = new CustomersViewModel(new CustomerDataProvider());
+            //DataContext = _viewModel;
+            //Loaded += CustomerView_Loaded;
         }
 
-        private void CustomerView_Loaded(object sender, RoutedEventArgs e)
-        {
-            _viewModel.LoadCustomers();
-        }
+        //private  async void CustomerView_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    await _viewModel.LoadAsync();
+        //}
 
         //private void ButtonMoveNavigation_Click(object sender, RoutedEventArgs e)
         //{

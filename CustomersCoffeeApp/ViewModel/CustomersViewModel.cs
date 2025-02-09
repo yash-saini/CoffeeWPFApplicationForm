@@ -40,10 +40,11 @@ namespace CustomersCoffeeApp.ViewModel
             DeleteCommand = new DelegateCommand(Delete,CanDelete);
         }
 
-        public void LoadCustomers()
+        public async override Task LoadAsync()
         {
             if (Customers.Count > 0) return;
-            foreach (var customer in _customerDataProvider.GetCustomers())
+            var customers = await _customerDataProvider.GetAllAsync();
+            foreach (var customer in customers)
             {
                 Customers.Add(new CustomerItemViewModel(customer));
             }

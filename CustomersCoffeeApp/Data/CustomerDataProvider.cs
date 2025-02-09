@@ -4,13 +4,15 @@ namespace CustomersCoffeeApp.Data
 {
     public interface ICustomerDataProvider
     {
-        IEnumerable<Customer> GetCustomers();
+        Task<IEnumerable<Customer>?> GetAllAsync();
     }
 
     public class CustomerDataProvider : ICustomerDataProvider
     {
-        public IEnumerable<Customer> GetCustomers()
+        public async Task<IEnumerable<Customer>?> GetAllAsync()
         {
+            await Task.Delay(100);
+
             return new List<Customer>
             {
                 new Customer { Id = 1, FirstName = "Yash", LastName = "Saini", IsDeveloper = true },
