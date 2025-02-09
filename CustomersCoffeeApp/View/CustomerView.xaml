@@ -9,6 +9,13 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <converter:NavigationSideToGridColumnConverter x:Key="NavigationSideToGridColumnConv"/>
+        <DataTemplate x:Key="CustomerDataTemplate">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding FirstName}" FontWeight="Bold" Margin="0 0 10 0"/>
+                    <TextBlock Text="{Binding LastName}"/>
+                </StackPanel>
+        </DataTemplate>
+
     </UserControl.Resources>
 
         <Grid>
@@ -21,7 +28,7 @@
 
             <!-- Customer list -->
             <Grid Grid.Column="{Binding NavigationSide,Converter={StaticResource NavigationSideToGridColumnConv}}"
-    Background="#777">
+    Background="#777" Width="260">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -38,8 +45,13 @@
                         <Image Source="/Images/move.png" Height="18"/>
                     </Button>
                 </StackPanel>
-                <ListView ItemsSource="{Binding Customers}" SelectedItem="{Binding SelectedCustomer,Mode=TwoWay}" DisplayMemberPath="FirstName" Grid.Row="1" Margin="10 0 10 10"/>
+                <!--<ListView ItemsSource="{Binding Customers}" SelectedItem="{Binding SelectedCustomer,Mode=TwoWay}" DisplayMemberPath="FirstName" Grid.Row="1" Margin="10 0 10 10"/>-->
+                <ListView ItemsSource="{Binding Customers}"
+                          SelectedItem="{Binding SelectedCustomer,Mode=TwoWay}"
+                          ItemTemplate="{StaticResource CustomerDataTemplate}"
+                          Grid.Row="1" Margin="10 0 10 10">
 
+                </ListView>
             </Grid>
 
             <!-- Customer detail -->
