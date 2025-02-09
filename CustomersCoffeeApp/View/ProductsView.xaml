@@ -7,6 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="Products" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <DataGrid ItemsSource="{Binding Products}" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Product Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>

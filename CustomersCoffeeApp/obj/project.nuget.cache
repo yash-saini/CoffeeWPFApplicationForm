@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SVaZIx9d2CI=",
+  "dgSpecHash": "gYBqmlRJ+2I=",
   "success": true,
   "projectFilePath": "C:\\Users\\ysaini\\source\\repos\\CoffeeWPFApplicationForm\\CustomersCoffeeApp\\CustomersCoffeeApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ysaini\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.1\\microsoft.extensions.dependencyinjection.9.0.1.nupkg.sha512",
+    "C:\\Users\\ysaini\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.1\\microsoft.extensions.dependencyinjection.abstractions.9.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
