@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomersCoffeeApp.ViewModel
 {
-    public class CustomerItemViewModel : ViewModelBase
+    public class CustomerItemViewModel : ValidationViewModelBase
     {
         private readonly Customer _model;
         public CustomerItemViewModel(Customer model)
@@ -25,6 +25,14 @@ namespace CustomersCoffeeApp.ViewModel
             {
                 _model.FirstName = value;
                 RaisePropertyChanged();
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    AddError("First Name is required");
+                }
+                else
+                {
+                    ClearErrors();
+                }
             }
         }
 
@@ -35,6 +43,14 @@ namespace CustomersCoffeeApp.ViewModel
             {
                 _model.LastName = value;
                 RaisePropertyChanged();
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    AddError("Last Name is required");
+                }
+                else
+                {
+                    ClearErrors();
+                }
             }
         }
 
